@@ -31,16 +31,6 @@ function Destination(city, country, bestTimeForTravel, famousLandmark, knownFor)
     let paris = new Destination("Paris", "France", "Spring", "Louvre", "Baguettes");
     let london = new Destination("London", "England", "Summer", "St. Paul's Cathedral", "Bangers and Mash");
 
-Destination.prototype.display = function (location) {
-  location.forEach(function(element) {
-    console.log(element);
-  })
-}
-
-
-// let printObject = function(obj) {
-//   if (this.destionations[i])
-// }
 
 
 
@@ -49,28 +39,22 @@ Destination.prototype.display = function (location) {
 let travelBook = new TravelBook();
 
 function displayDestinationDetails(travelBookToDisplay) {
-  let destination = $("ul#destination");
+  let destination = $("ul#destinations");
   let htmlForDestination = "";
   travelBookToDisplay.destination.forEach(function(destination) {
-    htmlForDestination += ""
-  }
-})
+    htmlForDestination += "<li id=" + destination.id + ">" + destination.city + " " + destination.country + "</li">;
+  });
+  destination.html(htmlForDestination);
+};
+
+
 
 $(document).ready(function() {
   $("form#display").submit(function(event))
   event.preventDefault();
 })
 
-// $(document).ready(function() {
-//   $(".clickable").click(function(event) {
-//     event.preventDefault();
-    
-    
-//     $("#seattle").text(seattle.city)
 
-
-
-  
 
   });
 });
