@@ -20,7 +20,7 @@ function Destination(city, country, bestTimeForTravel, famousLandmark, knownFor)
   this.knownFor = knownFor;
 }
 
-Destination
+Destination // hi //
 
 
 
