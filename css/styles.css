@@ -1,4 +1,18 @@
 #new-destination {
   margin-right: auto;
   padding-left: 3em;
+  display: none;
+}
+
+.clickable {
+  cursor: pointer;
+  color: #0088cc;
+}
+
+.clickable:hover {
+  text decoration: underline;
+}
+
+#show-destination {
+  display: none;
 }
