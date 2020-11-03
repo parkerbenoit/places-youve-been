@@ -15,7 +15,6 @@ TravelBook.prototype.assignId = function () {
 }
 
 
-
 // Business Logic for Destination ---------
 function Destination(city, country, bestTimeForTravel, famousLandmark, knownFor) {
   this.city = city;
@@ -25,18 +24,14 @@ function Destination(city, country, bestTimeForTravel, famousLandmark, knownFor)
   this.knownFor = knownFor;
 }
 
-    // let travelBook = new TravelBook();
-    let seattle = new Destination("Seattle", "USofA", "Summer", "Space Needle", "Rain");
-    let boston = new Destination("Boston", "USofA", "Fall", "Museum of Fine Arts", "Baked Beans");
-    let paris = new Destination("Paris", "France", "Spring", "Louvre", "Baguettes");
-    let london = new Destination("London", "England", "Summer", "St. Paul's Cathedral", "Bangers and Mash");
-
-
-
-
 
 //User Interface Logic
 let travelBook = new TravelBook();
+let seattle = new Destination("Seattle", "USofA", "Summer", "Space Needle", "Rain");
+let boston = new Destination("Boston", "USofA", "Fall", "Museum of Fine Arts", "Baked Beans");
+let paris = new Destination("Paris", "France", "Spring", "Louvre", "Baguettes");
+let london = new Destination("London", "England", "Summer", "St. Paul's Cathedral", "Bangers and Mash");
+
 
 function displayDestinationDetails(travelBookToDisplay) {
   let destination = $("ul#destinations");
@@ -48,15 +43,12 @@ function displayDestinationDetails(travelBookToDisplay) {
 };
 
 
-
 $(document).ready(function() {
-  $("form#display").submit(function(event))
-  event.preventDefault();
+  $("form#display").submit(function(event)) {
+    event.preventDefault();
+    travelBook.addDestination(seattle);
+    displayDestinationDetails(travelBook);
+
+  }
 })
-
-
-
-  });
-});
-
 
